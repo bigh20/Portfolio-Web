@@ -1,32 +1,17 @@
 /* Style minimaliste inspiré Gladstone */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fdfdfd;
+  background: #fafafa;
   color: #222;
   line-height: 1.6;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 header {
   text-align: center;
   padding: 4rem 2rem;
-  background: #fafafa;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
   border-bottom: 1px solid #ddd;
 }
 
@@ -36,13 +21,29 @@ header h1 {
 }
 
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
 section {
   margin-bottom: 3rem;
+}
+
+h2 {
+  border-left: 4px solid #0077cc;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #0077cc;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
 }
 
 footer {
@@ -53,42 +54,14 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-/* Animation fade-in */
+/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h2 {
-  transition: color 0.3s ease;
-}
-
-h2:hover {
-  color: #0077cc;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-header {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #fafafa, #f0f0f0);
-  border-bottom: 1px solid #ddd;
-  animation: fadeInUp 1.2s ease forwards;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
